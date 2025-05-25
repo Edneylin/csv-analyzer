@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 import io
 from pathlib import Path
 import os
@@ -18,10 +16,6 @@ st.set_page_config(
     page_icon="🏭",
     layout="wide"
 )
-
-# 設置中文字體
-plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']
-plt.rcParams['axes.unicode_minus'] = False
 
 def generate_pdf_report(df, station_metrics, top_performers, low_efficiency, high_efficiency, ct_abnormal):
     # 創建HTML模板
